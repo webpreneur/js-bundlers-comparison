@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+
+    <title>Webpack JS Bundler Generated HTML</title>
+</head>
+
+<body>
+
+    <ion-app>
+        <ion-split-pane when="sm" content-id="main-content">
+        
+        <!-- SIDEMENU -->
+        <ion-menu content-id="main-content">
+            <ion-header>
+                <ion-toolbar color="primary">
+                <ion-title>Menu</ion-title>
+                </ion-toolbar>
+            </ion-header>
+        
+            <ion-content>
+                <ion-list>
+                <ion-list-header>
+                    Navigate
+                </ion-list-header>
+                <ion-menu-toggle auto-hide="false">
+                    <ion-item button>
+                    <ion-icon slot="start" name='home'></ion-icon>
+                    <ion-label>
+                        Home
+                    </ion-label>
+                    </ion-item>
+                </ion-menu-toggle>
+                </ion-list>
+            </ion-content>
+        </ion-menu>
+        
+
+        <!-- MAIN CONTENT -->
+        <div class="ion-page" id="main-content">
+            <ion-header>
+
+                <ion-toolbar>
+
+                    <ion-buttons slot="start">
+                        <ion-menu-toggle>
+                        <ion-button>
+                            <ion-icon slot="icon-only" name="menu"></ion-icon>
+                        </ion-button>
+                        </ion-menu-toggle>
+                    </ion-buttons>
+
+                    <ion-title>Webpack JS Bundler Generated HTML</ion-title>
+                </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding">
+                <h1>Main Content</h1>
+            </ion-content>
+        </div>
+      
+        </ion-split-pane>
+
+      </ion-app>
+
+</body>
+
+</html>
