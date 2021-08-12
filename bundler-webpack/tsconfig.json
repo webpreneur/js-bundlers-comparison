@@ -3,7 +3,8 @@
       "outDir": "./dist/",
       "sourceMap": true,
       "noImplicitAny": true,
-      "module": "es6",
+      /* es2020 or esnext is required for code-splitting (lazy-loading) */
+      "module": "es2020",
       "target": "es5",
       "jsx": "react",
       "allowJs": true,

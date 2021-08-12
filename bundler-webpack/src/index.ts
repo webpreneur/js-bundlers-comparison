@@ -6,6 +6,7 @@ import '@spectrum-web-components/color-area/sp-color-area.js';
 
 import { ColorArea } from '@spectrum-web-components/color-area';
 
+
 (() => console.log('HELLO WORLD!'))();
 
 const tsDemoFunc = (message: string): void => console.log('TS compilation works fine' + message);
@@ -20,10 +21,19 @@ colorArea.color = {
     b: 100,
 };
 
-colorArea.addEventListener('input', ({ target }) => {
-    console.log((target as ColorArea).color);
-    console.log((target as ColorArea).value);
-    console.log((target as ColorArea).hue);
-    console.log((target as ColorArea).x);
-    console.log((target as ColorArea).y);
+colorArea.addEventListener('input', event => {
+
+    const areaEl: ColorArea = event.target as ColorArea;
+
+    console.log("message from index.ts");
+    console.log(areaEl.value);
+
+    import("./js/lazy/lazy-utils")
+        .then(({ LazyUtils }) => {
+            LazyUtils.logAreaProp(areaEl, 'color');
+            LazyUtils.logAreaProp(areaEl, 'hue');
+            LazyUtils.logAreaProp(areaEl, 'x');
+        })
+        .catch(console.error);
+
 });

@@ -4,9 +4,9 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "build:prod": "webpack --config webpack.config.js --mode production",
-    "build:dev": "webpack --config webpack.config.js --mode development",
-    "start-dev-server": "webpack serve --open"
+    "build:prod": "webpack --config webpack.config.js --env prod --mode production",
+    "build:dev": "webpack --config webpack.config.js --env dev --mode development",
+    "start-dev-server": "webpack serve --open --mode development"
   },
   "keywords": [],
   "author": "",
